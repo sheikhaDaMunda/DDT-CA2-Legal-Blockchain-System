@@ -105,7 +105,7 @@ contract LegalEscrow {
         }
     }
     
-    // Function 6: Check contract balance
+    // Function 6: Checking the contract balance
     function getBalance() public view returns (uint) {
         return address(this).balance;
     }

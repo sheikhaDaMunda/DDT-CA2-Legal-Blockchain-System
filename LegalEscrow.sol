@@ -72,7 +72,7 @@ contract LegalEscrow {
         emit FundsRefunded(client, escrowAmount);
     }
     
-    // Function 4: Raise a dispute
+    // Function 4: Raising a dispute
     function raiseDispute() public {
         require(msg.sender == client || msg.sender == solicitor, "Not authorized");
         require(fundsDeposited, "No active escrow");

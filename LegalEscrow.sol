@@ -41,7 +41,7 @@ contract LegalEscrow {
         emit FundsDeposited(client, msg.value);
     }
     
-    // Function 2: Release money to solicitor when deal is complete
+    // Function 2: Releasing the money to solicitor when deal is complete
     function releaseFunds() public {
         require(msg.sender == client || msg.sender == admin, "Not authorized");
         require(fundsDeposited, "No funds to release");

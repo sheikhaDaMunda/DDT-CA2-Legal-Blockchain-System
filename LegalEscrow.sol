@@ -32,8 +32,8 @@ contract LegalEscrow {
     // Function 1: Client deposits money into escrow
     function depositFunds() public payable {
         require(msg.sender == client, "Only client can deposit");
-        require(!fundsDeposited, "Funds already deposited");
-        require(msg.value > 0, "Must deposit some amount");
+        require(!fundsDeposited, "Funds have already been deposited");
+        require(msg.value > 0, "Must deposit any amount");
         
         escrowAmount = msg.value;
         fundsDeposited = true;
